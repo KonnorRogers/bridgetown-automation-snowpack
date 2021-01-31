@@ -2,16 +2,16 @@
 
 # Purpose
 
-To provide an easy way for Bridgetown users to add Stimulus to their project.
+To provide an easy way for Bridgetown users to add Snowpack to their project.
 
 ## Prerequisites
 
-- Ruby >= 2.5
-- Bridgetown >= 0.15.0
+- Ruby >= 2.6
+- Bridgetown >= 0.17.0
 
 ```bash
 bridgetown -v
-# => bridgetown 0.15.0 "Overlook"
+# => bridgetown 0.19.0
 ```
 
 This project requires the new `apply` command introduced in Bridgetown
@@ -22,13 +22,13 @@ This project requires the new `apply` command introduced in Bridgetown
 ### New project
 
 ```bash
-bridgetown new <newsite> --apply="https://github.com/ParamagicDev/bridgetown-automation-stimulus"
+bridgetown new <newsite> --apply="https://github.com/ParamagicDev/bridgetown-automation-snowpack"
 ```
 
 ### Existing Project
 
 ```bash
-[bundle exec] bridgetown apply https://github.com/ParamagicDev/bridgetown-automation-stimulus
+[bundle exec] bridgetown apply https://github.com/ParamagicDev/bridgetown-automation-snowpack
 ```
 
 ## Getting Started
