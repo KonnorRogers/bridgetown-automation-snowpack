@@ -1,4 +1,4 @@
-![build](https://github.com/ParamagicDev/bridgetown-automation-stimulus/workflows/build/badge.svg)
+![build](https://github.com/ParamagicDev/bridgetown-automation-snowpack/workflows/build/badge.svg)
 
 # Purpose
 
@@ -37,7 +37,7 @@ bridgetown new <newsite> --apply="https://github.com/ParamagicDev/bridgetown-aut
 
 Controllers should be placed in the `./frontend/javascript/controllers/` directory.
 Make sure the controllers follow the `[name]_controller.js` convention.
-Check out more @ [stimulusjs.org](https://stimulusjs.org)
+Check out more @ [snowpackjs.org](https://snowpackjs.org)
 
 ## Testing the "apply" command locally
 
@@ -49,17 +49,9 @@ wait for Github to update the raw file so the remote automation test will pass
 
 ```bash
 git clone
-https://github.com/ParamagicDev/bridgetown-automation-stimulus/
-cd bridgetown-automation-stimulus
+https://github.com/ParamagicDev/bridgetown-automation-snowpack/
+cd bridgetown-automation-snowpack
 bundle install
 bundle exec rake test
 ```
 
-### Testing with Docker
-
-```bash
-git clone
-https://github.com/ParamagicDev/bridgetown-automation-stimulus
-cd bridgetown-automation-stimulus
-docker-compose up --build
-```
