@@ -7,7 +7,7 @@ To provide an easy way for Bridgetown users to add Snowpack to their project.
 ## Prerequisites
 
 - Ruby >= 2.6
-- Bridgetown >= 0.17.0
+- Bridgetown >= 0.15.0
 
 ```bash
 bridgetown -v
@@ -33,25 +33,58 @@ bridgetown new <newsite> --apply="https://github.com/ParamagicDev/bridgetown-aut
 
 ## Getting Started
 
-### Adding controllers
+## What this does
 
-Controllers should be placed in the `./frontend/javascript/controllers/` directory.
-Make sure the controllers follow the `[name]_controller.js` convention.
-Check out more @ [snowpackjs.org](https://snowpackjs.org)
+This will install the following packages:
 
-## Testing the "apply" command locally
+- `snowpack`
+- `@snowpack/plugin-run-script`
+- `@snowpack/plugin-sass`
 
-Right now there is one big integration test which simply
-checks that the files were created for Stimulus in a new bridgetown project.
+This will add the following files:
 
-In order for the tests to pass, you must first push the branch you're working on and then
-wait for Github to update the raw file so the remote automation test will pass
+- `snowpack.config.js`
 
-```bash
-git clone
-https://github.com/ParamagicDev/bridgetown-automation-snowpack/
-cd bridgetown-automation-snowpack
-bundle install
-bundle exec rake test
+This will remove the following files:
+
+- `webpack.config.js`
+- `sync.js`
+- `start.js`
+
+This will uninstall the following packages:
+
+- `@babel/core`
+- `@babel/plugin-proposal-class-properties`
+- `@babel/plugin-proposal-decorators`
+- `@babel/plugin-transform-runtime`
+- `@babel/preset-env`
+- `babel-loader`
+- `browser-sync`
+- `concurrently`
+- `css-loader`
+- `file-loader`
+- `mini-css-extract-plugin`
+- `node-sass`
+- `sass-loader`
+- `webpack`
+- `webpack-cli`
+- `webpack-manifest-plugin`
+
+
+This will **NOT** remove or add `"scripts"` to your `package.json`.
+Those must be added manually.
+
+## Recommended scripts:
+
+// package.json
+```json
+{
+  "scripts": {
+    "build:src": "bin/bridgetown build",
+    "build": "NODE_ENV=production BRIDGETOWN_ENV=production snowpack build",
+    "clean:src": "bundle exec bridgetown clean",
+    "restart": "yarn clean:src && yarn start --reload",
+    "start": "snowpack dev"
+  }
+}
 ```
-
