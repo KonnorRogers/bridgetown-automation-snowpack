@@ -1,8 +1,6 @@
-![build](https://github.com/ParamagicDev/bridgetown-automation-snowpack/workflows/build/badge.svg)
-
 # Purpose
 
-To provide an easy way for Bridgetown users to add Snowpack to their project.
+To provide an easy way for Bridgetown users to add Snowpack to a project.
 
 ## Prerequisites
 
