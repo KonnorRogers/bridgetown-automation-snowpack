@@ -43,6 +43,12 @@ This will add the following files:
 
 - `snowpack.config.js`
 
+This will modify the following files:
+
+- `bridgetown.config.yml`
+- `src/_components/head.liquid`
+- `frontend/javascript/index.js`
+
 This will remove the following files:
 
 - `webpack.config.js`
@@ -69,20 +75,50 @@ This will uninstall the following packages:
 - `webpack-manifest-plugin`
 
 
-This will **NOT** remove or add `"scripts"` to your `package.json`.
-Those must be added manually.
+This will add *OR* replace the following `"scripts"` in your `package.json`.
 
-## Recommended scripts:
+## scripts:
 
 // package.json
 ```json
 {
   "scripts": {
-    "build:src": "bin/bridgetown build",
+    "build:bridgetown": "bundle exec bridgetown build",
     "build": "NODE_ENV=production BRIDGETOWN_ENV=production snowpack build",
-    "clean:src": "bundle exec bridgetown clean",
-    "restart": "yarn clean:src && yarn start --reload",
-    "start": "snowpack dev"
+    "clean:bridgetown": "bundle exec bridgetown clean",
+    "restart": "yarn clean:bridgetown && yarn start --reload",
+    "start": "snowpack dev",
+    "deploy": "yarn clean:bridgetown && yarn build"
   }
 }
 ```
+
+## Commands
+
+### `yarn start`
+
+Starts a dev server @ `localhost:4000` like normal
+
+### `yarn restart`
+
+Reset your cache, cleanup bridgetown, and give you a fresh slate.
+
+### `yarn build`
+
+Normal build command, builds to `output`
+
+### `yarn build:bridgetown`
+
+Builds bridgetown with snowpack. Builds to `.bridgetown`
+
+### `yarn clean:bridgetown`
+
+Wipe bridgetowns cache
+
+### `yarn deploy`
+
+Clean everything and create a fresh `output` directory
+
+## More Info
+
+Go check out https://snowpack.dev for more info on using Snowpack!
