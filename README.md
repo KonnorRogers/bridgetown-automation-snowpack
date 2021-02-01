@@ -2,6 +2,8 @@
 
 To provide an easy way for Bridgetown users to add Snowpack to a project.
 
+Shoutout to @andrewmcodes for making this possible.
+
 ## Prerequisites
 
 - Ruby >= 2.6
