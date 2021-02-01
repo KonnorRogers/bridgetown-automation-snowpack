@@ -2,7 +2,7 @@
 
 To provide an easy way for Bridgetown users to add Snowpack to a project.
 
-Shoutout to @andrewmcodes for making this possible.
+Shoutout to [@andrewmcodes](https://github.com/andrewmcodes) for making this possible.
 
 ## Prerequisites
 
