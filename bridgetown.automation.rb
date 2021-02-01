@@ -67,7 +67,6 @@ end
 
 def rewrite_index_js
   index_js = <<~JAVASCRIPT
-    import "../styles/index.scss"
     console.info("Bridgetown is loaded!")
   JAVASCRIPT
 
