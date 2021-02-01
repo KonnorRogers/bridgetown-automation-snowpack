@@ -111,7 +111,7 @@ Normal build command, builds to `output`
 
 ### `yarn build:bridgetown`
 
-Builds bridgetown with snowpack. Builds to `.bridgetown`
+Builds bridgetown without snowpack. Builds to `.bridgetown`
 
 ### `yarn clean:bridgetown`
 
